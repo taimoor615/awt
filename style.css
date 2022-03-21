@@ -704,3 +704,16 @@ footer{
 .featherlight-next span, .featherlight-previous span {
     font-size: 30px !important;
 }
+
+
+
+
+
+/*===================================
+               Park Tour Page
+ ====================================*/
+
+ .pg-title h1 {
+     font-size: 46px;
+     margin-bottom: 10px;
+ }

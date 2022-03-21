@@ -90,7 +90,7 @@ ul li{
     color: var(--primary-color);
 }
 .sidebar-content{
-    padding: 20px 20px;
+    padding: 20px 35px;
 }
 .sidebar-content h2{
     color: var(--white-color);
@@ -662,12 +662,15 @@ footer{
     border: 1px #aaa solid;
     box-sizing: border-box;
 }
+.form-wraper.my-contact-form {
+    margin-top: 50px;
+}
 .my-contact-form h3{
     font-family: var(--oswald-family);
     font-weight: 500;
     margin-bottom: 15px;
     color: var(--primary-color);
-    font-size: 24px;
+    font-size: 20px;
 }
 .my-contact-form #text-commment{
     resize: none;

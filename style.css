@@ -19,6 +19,7 @@
     --wild-life-bg-color:#F0D7C1;
     --star-color:#EDB409;
     --light-grey:#e7e1d1;
+    --inner-bg:#E5E1D4;
 }
 a{
     text-decoration: none;
@@ -30,9 +31,13 @@ a{
 a:hover{
     color: var(--secondary-color);
 }
+input,input:focus,textarea{
+    outline: none !important;
+}
 p{
     font-family: var(--futura-medium);
     color: var(--primary-color);
+    line-height: 1.9;
 }
 h1,h2,h3,h4,h5,h6{
     font-family: var(--oswald-family);
@@ -44,6 +49,67 @@ ul{
 }
 ul li{
     list-style: none;
+    display: inline-block;
+}
+.inner-main{
+    background-color:var(--inner-bg);
+    padding: 100px 0px;
+}
+.inner-structure-main{
+    display: grid;
+    grid-gap: 45px;
+    grid-template-columns: 1fr 300px;
+}
+.inner-sidebar{
+    width: 100%;
+    max-width: 300px;
+    background-color: var(--footer-bg-color);
+    border-radius: 5px;
+    overflow: hidden;
+}
+.sidebar-btn{
+    text-align: center;
+    margin-top: 100px;
+}
+.sidebar-btn a.contact-btn{
+    background-color: var(--secondary-color);
+    font-family: var(--futura-bold);
+    letter-spacing: 2px;
+    font-size: 16px;
+    color: var(--primary-color);
+    width: 100%;
+    max-width: 205px;
+    margin: 0 auto;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+.sidebar-btn a.contact-btn:hover{
+    background-color: var(--white-color);
+    color: var(--primary-color);
+}
+.sidebar-content{
+    padding: 20px 20px;
+}
+.sidebar-content h2{
+    color: var(--white-color);
+    margin-bottom: 30px;
+}
+.sidebar-content p{
+    margin-bottom: 15px;
+}
+.sidebar-content p,.sidebar-content a{
+    color: var(--white-color);
+    font-family: var(--futura-medium);
+    font-size: 18px;
+}
+.sidebar-content a:hover{
+    color: var(--secondary-color);
+}
+.sidebar-content p span{
+    width: 20px;
+    margin-right: 10px;
     display: inline-block;
 }
 /*===================================
@@ -281,6 +347,10 @@ header{
     max-width: 295px;
     position: relative;
     height: 455px;
+    margin-right: 20px;
+}
+.tours-main .tour-inner:last-child{
+    margin-right: 0px;
 }
 .tour-inner:after{
     content: "";
@@ -292,10 +362,11 @@ header{
     width: 100%;
     border-radius: 5px;
 }
-.tour-inner img{
+.tour-inner > img{
     border-radius: 5px;
     height: 100%;
     object-fit: cover;
+    width: 100%;
 }
 .tour-content {
     position: absolute;
@@ -349,6 +420,8 @@ header{
 }
 .teton-img img{
     width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 .teton-content h3{
     font-size: 46px;
@@ -431,12 +504,19 @@ header{
 }
 .wildlife-inner .wildlife-descp:nth-child(4n-2){
     flex-direction: column-reverse;
+    margin-right: 0px;
 }
 .wildlife-inner .wildlife-descp:nth-child(4n-2) img{
     margin-bottom: 0;
 }
 .wildlife-inner .wildlife-descp:nth-child(4n-2) .wild-content{
     margin-bottom: 20px;
+}
+.wildlife-inner .wildlife-descp h3{
+    font-size: 36px;
+}
+.wildlife-inner .wildlife-descp p{
+    font-size: 16px;
 }
 .testimonial-sec{
     background-image: url("images/testimonial-bg-img.png");
@@ -534,8 +614,92 @@ footer{
     font-size: 18px;
     font-family: var(--futura-book);
     color: var(--white-color);
+    margin-bottom: 10px;
+}
+.footer-inner-row .footer-col.contact-info p a{
+    margin-bottom: 0;
 }
 .footer-inner-row .footer-col ul li{
     margin-right: 10px;
     margin-bottom: 20px;
+}
+/*================================================
+                Contact Form
+ =================================================*/
+.form-3 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+.form-3 .field {
+    width: 31%;
+    position: relative;
+}
+.form-3 label, .field label {
+    display: block;
+    font-family: var(--oswald-family);
+    color: var(--primary-color);
+    font-size: 16px;
+    font-weight: 500;
+}
+.form-3 input, textarea, .field input {
+    margin: 0;
+    padding: 5px 10px;
+    width: 100%;
+    height: auto;
+    color: #656565;
+    background: #fff;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    -webkit-box-shadow: 0 2px 5px 0 rgb(0 0 0 / 10%) inset;
+    -moz-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.1) inset;
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 10%) inset;
+    -webkit-transition: border-color .2s ease-out, -webkit-box-shadow .2s ease-out;
+    -moz-transition: border-color .2s ease-out, -moz-box-shadow .2s ease-out;
+    transition: border-color .2s ease-out, box-shadow .2s ease-out;
+    border: 1px #aaa solid;
+    box-sizing: border-box;
+}
+.my-contact-form h3{
+    font-family: var(--oswald-family);
+    font-weight: 500;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+    font-size: 24px;
+}
+.my-contact-form #text-commment{
+    resize: none;
+}
+.my-contact-form .submit-btn input{
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+    text-transform: uppercase;
+    display: block;
+    text-align: center;
+    padding: 10px 30px;
+    margin-top: 0;
+    border-radius: 5px;
+    font-family: var(--oswald-family);
+    border: none;
+    transition: .3s;
+}
+.my-contact-form .submit-btn input:hover{
+    background-color: var(--primary-color);
+}
+/*===========================================
+                Gallery Page
+ ===========================================*/
+.gallery-wrap {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+.gallery-wrap a {
+    height: 200px;
+    overflow: hidden;
+}
+.featherlight-next span, .featherlight-previous span {
+    font-size: 30px !important;
 }

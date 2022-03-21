@@ -2,7 +2,16 @@
     /* We can also changes variable value inside media queries and we can also add new variables */
 }
 @media all and (max-width: 1600px){}
-@media all and (max-width: 1399px){}
+@media all and (max-width: 1399px){
+    .teton-content p{
+        margin-bottom: 15px;
+    }
+}
+@media all and (max-width: 1299px){
+    .teton-content,.teton-tours-main .teton-tour:nth-child(2n-4) .teton-content{
+        padding: 50px;
+    }
+}
 @media all and (max-width: 1199px){
     header{
         background-size: cover;
@@ -10,7 +19,7 @@
     .Toggle-button, .phone_xs {
         display: block;
         font-size: 30px;
-        color: var(--primary-color)
+        color: var(--primary-color);
         text-decoration: none !important;
         position: absolute;
         top: 85px;
@@ -51,11 +60,33 @@
     .weather{
         margin-right: 20px;
     }
+    .tours-main{
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 70px;
+    }
+    .tours-main .tour-inner{
+        margin-bottom: 20px;
+    }
+    .tours-main .tour-inner:last-child{
+        margin-right: 20px;
+    }
+    .teton-tour{
+        flex-direction: column !important;
+    }
+    .teton-content,.teton-img{
+        width: 100%;
+    }
+}
+@media all and (max-width: 1024px){
+    .tours-main .tour-inner:nth-child(2n-4){
+        margin-right: 0px;
+    }
 }
 @media all and (max-width: 991px){
     .banner-item{
         background-size: contain;
-        padding: 25% 0px 48%;
+        padding: 25% 0px 55%;
     }
     .banner-content{
         margin: 0 auto;
@@ -71,16 +102,190 @@
     .banner-content p{
         color: var(--primary-color);
     }
+    .swiper-button-next, .swiper-button-prev{
+        top: 30%;
+    }
+    .teton-content h3{
+        font-size: 35px;
+    }
+    .grand-teton-sec{
+        padding: 50px 0 55%;
+    }
+    .grand-fly-fish-sec {
+        padding: 50px 50px;
+    }
+    .fly-head h2{
+        font-size: 35px;
+    }
+    .teton-content, .teton-tours-main .teton-tour:nth-child(2n-4) .teton-content{
+        padding: 20px;
+    }
+    .teton-content p{
+        line-height: 30px;
+    }
+    .wildlife-inner .wildlife-descp h3 {
+        font-size: 30px;
+    }
+    .wildlife-descp{
+        margin-right: 15px;
+    }
+    .wild-content{
+        padding: 25px;
+    }
+    .teton-head h2{
+        font-size: 35px;
+    }
+    .footer-inner-row{
+        flex-wrap: wrap;
+    }
+    .footer-col{
+        width: 50%;
+    }
+    .footer-inner-row {
+        justify-content: center;
+    }
+    .footer-img{
+        margin-top: 20px;
+    }
+    footer{
+        padding: 50px 0px;
+    }
 }
 @media all and (max-width: 767px){
+    .container-fluid{
+        padding: 0px 15px;
+    }
+    .banner-content p{
+        line-height: 1.3;
+    }
+    .banner-content{
+        padding: 0px 10px;
+    }
+    .banner-sec .swiper-button-next i, .banner-sec .swiper-button-prev i{
+        font-size: 50px;
+    }
     .weather{
         display: none;
     }
     .banner-content h1{
         font-size: 40px;
     }
+    .teton-content h3 {
+        font-size: 30px;
+    }
+    .grand-fly-fish-sec {
+        padding: 50px 0px;
+    }
+    .teton-head h2{
+        font-size: 30px;
+    }
+    .teton-content p{
+        font-size: 15px;
+    }
+    .tours-main .tour-inner{
+        margin-right: 0;
+    }
+    .tour-inner{
+        max-width: 100%;
+    }
+    .fly-head h2{
+        font-size: 30px;
+    }
+    .fly-head p{
+        font-size: 15px;
+        margin-bottom: 15px;
+    }
+    .grand-fly-graphics{
+        flex-direction: column;
+        align-items: center;
+    }
+    .fly-1{
+        margin-bottom: 15px;
+    }
+    .fly-2{
+        margin: 0px;
+    }
+    .wildlife-inner{
+        flex-direction: column;
+    }
+    .wildlife-inner .wildlife-descp:nth-child(4n-2){
+        flex-direction: column;
+    }
+    .wildlife-descp{
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    .wildlife-inner .wildlife-descp:nth-child(4n-2) .wild-content{
+        margin-bottom: 0;
+        margin-top: 20px;
+    }
+    .wildlife-inner .wildlife-descp:last-child{
+        margin-bottom: 0px;
+    }
+    .wildlife-sec{
+        padding: 50px 10px ;
+    }
+    .wildlife-inner .wildlife-descp h3 {
+        font-size: 25px;
+    }
+    .wildlife-inner .wildlife-descp p {
+        font-size: 15px;
+    }
+    .footer-col {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .footer-inner-row .footer-col:last-child{
+        margin-bottom: 0px;
+    }
+    .footer-inner-row .footer-col.contact-info {
+        padding-left: 12px;
+    }
+    .footer-inner-row h2{
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+    .copyright{
+        margin-bottom: 0px;
+    }
+    .footer-inner-row .footer-col ul {
+        margin-bottom: 0px;
+    }
+    .footer-img{
+        margin-top: 0;
+    }
+    .footer-inner-row .footer-col ul li{
+        margin-bottom: 10px;
+    }
 }
-@media all and (max-width: 575px){}
-@media all and (max-width: 475px){}
-@media all and (max-width: 375px){}
+@media all and (max-width: 575px){
+    .banner-content h1 {
+        font-size: 30px;
+    }
+    .banner-content p{
+        font-size: 18px;
+    }
+    .banner-item{
+        padding: 25% 0 60%;
+    }
+}
+@media all and (max-width: 475px){
+    .swiper-button-next, .swiper-button-prev {
+        top: 25%;
+    }
+}
+@media all and (max-width: 460px){
+    .testimonial-img {
+        transform: translateX(5px);
+    }
+    .banner-item{
+        padding: 25% 0 75%;
+    }
+}
+@media all and (max-width: 375px){
+    .banner-item{
+        padding: 25% 0 85%;
+    }
+}
 @media all and (max-width: 360px){}

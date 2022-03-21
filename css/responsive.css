@@ -1,0 +1,86 @@
+@media all and (min-width: 992px){
+    /* We can also changes variable value inside media queries and we can also add new variables */
+}
+@media all and (max-width: 1600px){}
+@media all and (max-width: 1399px){}
+@media all and (max-width: 1199px){
+    header{
+        background-size: cover;
+    }
+    .Toggle-button, .phone_xs {
+        display: block;
+        font-size: 30px;
+        color: var(--primary-color)
+        text-decoration: none !important;
+        position: absolute;
+        top: 85px;
+        left: 20px;
+    }
+    .phone_xs {
+        left: unset;
+        right: 20px;
+    }
+    .menu{
+        display: none;
+        position: absolute;
+        top: 210px;
+        z-index: 99;
+        background-color: var(--white-color);
+    }
+    .menu ul li{
+        display: block;
+        margin-bottom: 10px;
+    }
+    .header-menu{
+        position: absolute;
+        width: auto;
+        left: 0;
+        right: 0;
+    }
+    .header-topbar {
+        justify-content: center;
+    }
+    .header-logo {
+        margin-top: 60px;
+        width: 100%;
+        text-align: center;
+    }
+    .header-topbar .contact{
+        display: none;
+    }
+    .weather{
+        margin-right: 20px;
+    }
+}
+@media all and (max-width: 991px){
+    .banner-item{
+        background-size: contain;
+        padding: 25% 0px 48%;
+    }
+    .banner-content{
+        margin: 0 auto;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 20px;
+    }
+    .banner-content h1{
+        color: var(--primary-color);
+        font-size: 45px;
+    }
+    .banner-content p{
+        color: var(--primary-color);
+    }
+}
+@media all and (max-width: 767px){
+    .weather{
+        display: none;
+    }
+    .banner-content h1{
+        font-size: 40px;
+    }
+}
+@media all and (max-width: 575px){}
+@media all and (max-width: 475px){}
+@media all and (max-width: 375px){}
+@media all and (max-width: 360px){}

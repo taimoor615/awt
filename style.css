@@ -1,0 +1,541 @@
+@import "css/fonts.css";
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --primary-color:#311D00;
+    --secondary-color:#D3A344;
+    --white-color:#ffffff;
+    --oswald-family:Oswald,sans-serif;
+    --futura-bold:futurabold,sans-serif;
+    --futura-book:futurabook,sans-serif;
+    --futura-heavy:futuraheavy,sans-serif;
+    --futura-medium:futuramedium,sans-serif;
+    --insta-bg-color:#773EF2;
+    --fb-bg-color:#3D5B99;
+    --tripadvisor-bg-color:#51B454;
+    --footer-bg-color:#343C4A;
+    --wild-life-bg-color:#F0D7C1;
+    --star-color:#EDB409;
+    --light-grey:#e7e1d1;
+}
+a{
+    text-decoration: none;
+    font-family: var(--futura-medium);
+    color: var(--primary-color);
+    transition: .3s;
+    display: inline-block;
+}
+a:hover{
+    color: var(--secondary-color);
+}
+p{
+    font-family: var(--futura-medium);
+    color: var(--primary-color);
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: var(--oswald-family);
+    color: var(--primary-color);
+}
+ul{
+    margin: 0;
+    padding: 0;
+}
+ul li{
+    list-style: none;
+    display: inline-block;
+}
+/*===================================
+                Header
+ ====================================*/
+header{
+    background-image: url("images/header-bg.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding: 10px 0px;
+    border-bottom: 3px solid var(--primary-color);
+}
+.container-fluid{
+    max-width: 1600px;
+    margin: 0 auto;
+    padding:0 50px;
+}
+.header-inner-main{
+    display: flex;
+    width: 100%;
+}
+.header-topbar{
+    display: flex;
+    align-items: center;
+}
+.header-topbar .weather a{
+    color: var(--primary-color);
+    font-size: 16px;
+    font-family: var(--futura-medium);
+    text-transform: uppercase;
+}
+.header-topbar .weather img{
+    animation-name: spin;
+    animation-duration: 5000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.header-topbar .weather a:hover{
+    color: var(--secondary-color);
+}
+.header-topbar .contact{
+    display: flex;
+    margin: 0px 20px;
+}
+.header-topbar .contact a{
+    font-family: var(--oswald-family);
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 5px 15px;
+}
+.header-topbar .contact a:last-child{
+    font-weight: 400;
+}
+.header-topbar .contact a:first-child{
+    background-color: var(--secondary-color);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    color: var(--primary-color);
+}
+.header-topbar .contact a:first-child:hover{
+    background-color: var(--white-color);
+}
+.header-topbar .contact a:last-child{
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    font-size: 16px;
+}
+.header-topbar .contact a:last-child:hover{
+    background-color: var(--white-color);
+    color: var(--primary-color);
+}
+.header-menu{
+    width: 100%;
+    padding: 15px 0px;
+}
+.header-topbar {
+    display: flex;
+    justify-content: flex-end;
+}
+.menu{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 25px;
+}
+.menu ul li{
+    padding: 0px 15px;
+}
+.menu ul li a{
+    text-transform: uppercase;
+    font-size: 16px;
+    color: var(--primary-color);
+}
+.menu ul li a:hover{
+    color: var(--secondary-color);
+}
+.social-icons ul li a{
+    color: var(--white-color);
+    font-size: 16px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+}
+.social-icons ul li:first-child a{
+    background-color: var(--insta-bg-color);
+}
+.social-icons ul li:nth-child(2) a{
+    margin: 0px 10px;
+    background-color: var(--fb-bg-color);
+}
+.social-icons ul li:last-child a{
+    background-color: var(--tripadvisor-bg-color);
+}
+.Toggle-button, .phone_xs {
+    display: none;
+}
+/*===================================
+                Main
+ ====================================*/
+.banner-item{
+    background-image: url("images/banner-img.png");
+    background-repeat: no-repeat;
+    padding: 25% 0px 15%;
+    background-size: 100% 100%;
+}
+.banner-sec .swiper-button-next:after,.banner-sec .swiper-button-prev:after{
+    content: none;
+}
+.banner-sec .swiper-button-next i,.banner-sec .swiper-button-prev i{
+    display: block;
+    font-size: 80px;
+    line-height: 44px;
+    text-align: center;
+    color: #fff;
+    opacity: .5;
+}
+.banner-sec .swiper-button-prev{
+    left: 30px;
+}
+.banner-sec .swiper-button-next{
+    right: 30px;
+}
+.banner-sec .swiper-button-next i:hover,.banner-sec .swiper-button-prev i:hover{
+    opacity: 1;
+}
+.banner-content{
+    max-width: 530px;
+    text-align: center;
+    margin-left: 100px;
+}
+.banner-content h1{
+    font-family: var(--oswald-family);
+    font-weight: 400;
+    font-size: 58px;
+    font-style: italic;
+    color: var(--white-color);
+}
+.banner-content p{
+    font-family: var(--futura-medium);
+    font-size: 20px;
+    color: var(--white-color);
+}
+.banner-content a{
+    background-color: var(--primary-color);
+    padding: 3px 3px;
+    border-radius: 5px;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 250px;
+    margin: 0 auto;
+}
+.banner-content a img{
+    padding: 5px 15px;
+}
+.banner-content a span{
+    padding: 10px 10px;
+    display: inline-block;
+    background-color: var(--secondary-color);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    max-width: 200px;
+    width: 100%;
+    font-family: var(--oswald-family);
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: .3s;
+}
+.banner-content a:hover span{
+    background-color: var(--white-color);
+}
+.grand-teton-sec{
+    padding: 100px 0px 55%;
+    background-image: url("images/teton-bg-img.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.teton-head {
+    max-width: 590px;
+    margin: 0 auto;
+    text-align: center;
+}
+.teton-head h2{
+    font-family: var(--oswald-family);
+    font-size: 36px;
+    color:var(--primary-color);
+    position: relative;
+}
+.teton-head h2:after{
+    content: "";
+    background-color: var(--primary-color);
+    height: 3px;
+    width: 70px;
+    margin: 0 auto;
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    right: 0;
+}
+.tours-main{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 150px;
+}
+.tour-inner {
+    width: 100%;
+    max-width: 295px;
+    position: relative;
+    height: 455px;
+}
+.tour-inner:after{
+    content: "";
+    position: absolute;
+    background: linear-gradient(0deg, #000000 -39.18%, rgba(0, 0, 0, 0) 100%);
+    bottom: 0;
+    left: 0;
+    height: 60%;
+    width: 100%;
+    border-radius: 5px;
+}
+.tour-inner img{
+    border-radius: 5px;
+    height: 100%;
+    object-fit: cover;
+}
+.tour-content {
+    position: absolute;
+    bottom: 30px;
+    text-align: center;
+    max-width: 100%;
+    width: 100%;
+    z-index: 99;
+}
+.tour-content h3{
+    font-family: var(--oswald-family);
+    font-weight: 500;
+    margin-bottom: 25px;
+    color: var(--white-color);
+    font-size: 24px;
+}
+.tour-content a{
+    background-color: var(--secondary-color);
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    max-width: 165px;
+    margin: 0 auto;
+    justify-content: space-around;
+}
+.tour-content a:hover{
+    background-color: var(--white-color);
+}
+.tour-content a span{
+    color: var(--primary-color);
+    font-size: 16px;
+    font-family: var(--oswald-family);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.teton-tour{
+    display: flex;
+}
+.teton-content{
+    background-color: var(--primary-color);
+    padding: 50px 50px 50px 100px;
+    display: flex;
+    vertical-align: middle;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 50%;
+}
+.teton-img{
+    width: 50%;
+}
+.teton-img img{
+    width: 100%;
+}
+.teton-content h3{
+    font-size: 46px;
+    font-family: var(--oswald-family);
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--white-color);
+}
+.teton-content p{
+    font-family: var(--futura-medium);
+    font-size: 16px;
+    margin-bottom:30px;
+    line-height: 35px;
+    color: var(--white-color);
+}
+.teton-tours-main .teton-tour:nth-child(2n-4){
+    flex-direction: row-reverse;
+}
+.teton-tours-main .teton-tour:nth-child(2n-4) .teton-content{
+    padding: 50px 100px 50px 50px;
+}
+.grand-fly-fish-sec{
+    padding: 100px 50px;
+}
+.fly-head {
+    max-width: 950px;
+    text-align: center;
+    margin: 0 auto;
+}
+.fly-head h2{
+    font-family: var(--oswald-family);
+    font-size: 46px;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+.fly-head p{
+    font-size: 16px;
+    font-family: var(--futura-medium);
+    margin-bottom: 30px;
+    line-height: 1.9;
+}
+.grand-fly-graphics{
+    display: flex;
+    justify-content:center;
+}
+.grand-fly-graphics img{
+    border-radius: 5px;
+}
+.fly-2{
+    display: flex;
+    flex-direction: column;
+    margin: 0px 20px;
+}
+.fly-2 img{
+    margin-bottom: 15px;
+}
+.wildlife-sec{
+    background-color: var(--primary-color);
+    padding: 50px 10px 100px;
+}
+.wildlife-inner{
+    display: flex;
+    justify-content: space-between;
+}
+.wildlife-descp {
+    display: flex;
+    flex-direction: column;
+    margin-right: 25px;
+    width: 50%;
+}
+.wildlife-descp img{
+    margin-bottom: 20px;
+    border-radius: 5px;
+    width: 100%;
+}
+.wild-content{
+    background-color: var(--wild-life-bg-color);
+    border-radius: 5px;
+    padding: 30px 40px;
+}
+.wildlife-inner .wildlife-descp:nth-child(4n-2){
+    flex-direction: column-reverse;
+}
+.wildlife-inner .wildlife-descp:nth-child(4n-2) img{
+    margin-bottom: 0;
+}
+.wildlife-inner .wildlife-descp:nth-child(4n-2) .wild-content{
+    margin-bottom: 20px;
+}
+.testimonial-sec{
+    background-image: url("images/testimonial-bg-img.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 100px 0px;
+}
+.testimonial-item{
+    max-width: 730px;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+}
+.testimonial-stars{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.testimonial-img{
+    transform: translateX(30px);
+}
+.testimonial-stars i{
+    color: var(--star-color);
+    font-size: 30px;
+}
+.testimonial-content p{
+    font-family: var(--futura-medium);
+    font-size: 16px;
+    line-height: 1.9;
+    margin-bottom: 20px;
+}
+.testimonial-content h3{
+    font-family: var(--oswald-family);
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+.swiper-pagination-bullet{
+    background-color: #B0A692;
+    opacity: 1;
+    width: 10px;
+    height: 10px;
+}
+.swiper-pagination-bullet.swiper-pagination-bullet-active{
+    background-color: var(--primary-color);
+}
+.footer-last{
+    background-color: var(--light-grey);
+}
+.footer-last img{
+    width: 100%;
+}
+/*===================================
+                Footer
+ ====================================*/
+footer{
+    background-color:var(--footer-bg-color);
+    padding: 100px 0px;
+}
+.footer-inner-row{
+    justify-content: space-between;
+}
+.footer-inner-row h2{
+    font-size: 32px;
+    font-family: var(--oswald-family);
+    font-weight: 500;
+    color: var(--white-color);
+    margin-bottom: 50px;
+}
+.footer-inner-row .footer-col a,.footer-inner-row .footer-col span{
+    color: var(--white-color);
+    font-size: 16px;
+    font-family: var(--futura-book);
+}
+.footer-inner-row .footer-col a:hover,.footer-inner-row .footer-col.contact-info p a:hover{
+    color: var(--secondary-color);
+}
+.footer-inner-row .footer-col ul{
+    margin-bottom: 20px;
+}
+.copyright{
+    font-size: 16px;
+    font-family: var(--futura-book);
+    color: var(--white-color);
+}
+.footer-inner-row .footer-col span{
+    margin-right: 5px;
+}
+.footer-inner-row .footer-col.contact-info span{
+    width: 20px;
+    display: inline-block;
+}
+.footer-inner-row .footer-col.contact-info{
+    padding-left: 50px;
+}
+.footer-inner-row .footer-col.contact-info p,.footer-inner-row .footer-col.contact-info p a{
+    font-size: 18px;
+    font-family: var(--futura-book);
+    color: var(--white-color);
+}
+.footer-inner-row .footer-col ul li{
+    margin-right: 10px;
+    margin-bottom: 20px;
+}

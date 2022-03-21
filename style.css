@@ -21,6 +21,7 @@
     --star-color:#EDB409;
     --light-grey:#e7e1d1;
     --inner-bg:#E5E1D4;
+    --label-color: #585858;
 }
 a{
     text-decoration: none;
@@ -75,8 +76,9 @@ ul li{
 .sidebar-btn a.contact-btn{
     background-color: var(--secondary-color);
     font-family: var(--futura-bold);
-    letter-spacing: 2px;
+    letter-spacing: 0;
     font-size: 16px;
+    font-weight: 600;
     color: var(--primary-color);
     width: 100%;
     max-width: 205px;
@@ -629,20 +631,21 @@ footer{
  =================================================*/
 .form-3 {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: space-between;
     margin-bottom: 25px;
 }
 .form-3 .field {
-    width: 31%;
+    width: 32%;
     position: relative;
 }
 .form-3 label, .field label {
     display: block;
     font-family: var(--oswald-family);
-    color: var(--primary-color);
+    color: var(--label-color);
     font-size: 16px;
     font-weight: 500;
+    margin-bottom: 14px;
 }
 .form-3 input, textarea, .field input {
     margin: 0;
@@ -691,6 +694,10 @@ footer{
 }
 .my-contact-form .submit-btn input:hover{
     background-color: var(--primary-color);
+}
+.form-3.field-message .field {
+    width: 100%;
+    max-width: 450px;
 }
 /*===========================================
                 Gallery Page

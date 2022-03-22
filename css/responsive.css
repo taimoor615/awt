@@ -89,6 +89,17 @@
         flex-direction: column;
         align-items: flex-start;
     }
+    .post-head {
+        flex-direction: column;
+    }
+    .post-head .post-img {
+        width: 100%;
+        margin: 0 0 30px;
+    }
+    .post-head .post-info {
+        padding-left: 0;
+        width: 100%;
+    }
 }
 @media all and (max-width: 1024px){
     .tours-main .tour-inner:nth-child(2n-4){

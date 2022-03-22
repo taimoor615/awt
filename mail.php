@@ -6,7 +6,6 @@ if ($_SERVER['REQUEST_METHOD']=="POST"){
     $subject = "Ridge Retreat - Contact Query";
     $headers = "From: webmaster@example.com" . "\r\n";
     $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
-
     mail($to,$subject,$message,$headers);
     header( "Location: thankyou.html" );
 

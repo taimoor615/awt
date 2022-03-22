@@ -709,6 +709,15 @@ label.error,label.custom_error {
     max-width: 450px;
 }
 /*===========================================
+                Thank You Page
+ ============================================*/
+.thankyou-data h1{
+    margin-bottom: 0px;
+}
+.thankyou-data p{
+    font-size: 22px;
+}
+/*===========================================
                 Gallery Page
  ===========================================*/
 .gallery-main-banner{
@@ -741,7 +750,7 @@ label.error,label.custom_error {
      font-size: 46px;
      margin-bottom: 10px;
  }
- .pg-title span, .location-wrap span{
+ .all-posts .cat-title span{
      background-color: var(--secondary-color);
      padding: 10px;
      width: 100%;
@@ -753,6 +762,9 @@ label.error,label.custom_error {
      border-left: 3px solid var(--primary-color);
      display: inline-block;
  }
+.cat-title {
+    margin-bottom: 50px;
+}
  .location-wrap {
      margin: 50px 0 -26px;
  }
@@ -760,9 +772,11 @@ label.error,label.custom_error {
      padding-bottom: 0px;
      border-bottom: 0px solid transparent;
  }
+.all-posts .post-main:not(.all-posts .post-main:last-child) {
+    margin-bottom: 50px;
+}
  .post-head{
      display: flex;
-     margin-top: 50px;
  }
  .post-head .post-img{
      width: 50%;

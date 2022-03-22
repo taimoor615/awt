@@ -366,5 +366,22 @@
     .gallery-wrap{
         grid-template-columns:repeat(1, 1fr);
     }
+    .post-head .post-info ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .post-head .post-info ul > span {
+        display: none;
+    }
+    .cat-title {
+        margin-bottom: 30px;
+    }
+    .post-descp {
+        padding-bottom: 30px;
+    }
+    .all-posts .post-main:not(.all-posts .post-main:last-child) {
+        margin-bottom: 30px;
+    }
+    
 }
 @media all and (max-width: 360px){}

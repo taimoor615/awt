@@ -8,15 +8,6 @@
 }
 
 @font-face {
-    font-family: 'futuralight';
-    src: url('../fonts/FuturaPT-Light.woff2') format('woff2'),
-        url('../fonts/FuturaPT-Light.woff') format('woff');
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
     font-family: 'futurabold';
     src: url('../fonts/FuturaPT-Bold.woff2') format('woff2'),
         url('../fonts/FuturaPT-Bold.woff') format('woff');

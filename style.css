@@ -822,12 +822,13 @@ label.error,label.custom_error {
 .table-data{
     border: 1px solid var(--primary-color);
     border-radius: 8px;
+    overflow: auto;
 }
 .post-dtl table{
     border-radius: 8px;
     background-color: var(--white-color);
     width: 100%;
-    overflow: hidden;
+    min-width: 767px;
 }
 .post-dtl table tr:first-child th{
     background-color: var(--secondary-color);

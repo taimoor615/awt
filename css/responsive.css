@@ -313,6 +313,18 @@
     .gallery-wrap{
         grid-template-columns:repeat(3, 1fr);
     }
+    .post-main .post-img {
+        max-height: 400px;
+    }
+    .descp-graphics {
+        display: block;
+    }
+    .descp-graphics .descp-1:not(:last-child) {
+        margin-bottom: 30px;
+    }
+    .descp-1-img {
+        max-height: 400px;
+    }
 }
 @media all and (max-width: 575px){
     .banner-content h1 {
@@ -326,6 +338,12 @@
     }
     .gallery-wrap{
         grid-template-columns:repeat(2, 1fr);
+    }
+    .post-head .post-info h2 {
+        font-size: 26px;
+    }
+    .post-head .post-info ul li p {
+        font-size: 16px;
     }
 }
 @media all and (max-width: 475px){

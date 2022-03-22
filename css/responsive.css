@@ -87,6 +87,7 @@
     }
     .form-3 {
         flex-direction: column;
+        align-items: flex-start;
     }
 }
 @media all and (max-width: 1024px){
@@ -160,6 +161,12 @@
     }
     footer{
         padding: 50px 0px;
+    }
+    .inner-structure-main {
+        display: block;
+    }
+    .left-content-wrapper {
+        margin-bottom: 50px;
     }
 }
 @media all and (max-width: 767px){
@@ -268,6 +275,18 @@
     }
     .footer-inner-row .footer-col ul li{
         margin-bottom: 10px;
+    }
+    .inner-main {
+        padding: 70px 0px;
+    }
+    .left-content-wrapper > h1 {
+        font-size: 28px;
+    }
+    .form-wraper.my-contact-form {
+        margin-top: 40px;
+    }
+    .sidebar-content h2 {
+        font-size: 24px;
     }
 }
 @media all and (max-width: 575px){

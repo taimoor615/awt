@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/responsive.css">
-    <title>Home Page</title>
+    <title>Contact</title>
 </head>
 <body>
 <header>
@@ -20,7 +20,7 @@
         <div class="header-inner-main">
             <a href="javascript:void(0);" class="Toggle-button fa fa-bars"></a>
             <div class="header-logo">
-                <a href="">
+                <a href="index.html">
                     <img src="images/logo.svg" alt="" class="img-fluid">
                 </a>
             </div>
@@ -44,13 +44,13 @@
                 </div>
                 <div class="menu">
                     <ul>
-                        <li><a href=""><i class="fa fa-home" aria-hidden="true"></i></a></li>
-                        <li><a href="">National Park tours</a></li>
-                        <li><a href="">Fishing Tours</a></li>
-                        <li><a href="">Scenic Tours</a></li>
-                        <li><a href="">Combo Tours</a></li>
-                        <li><a href="">Gallery</a></li>
-                        <li><a href="">Contact Us</a></li>
+                        <li><a href="index.html"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+                        <li><a href="park-tour.html">National Park tours</a></li>
+                        <li><a href="fishing-tours.html">Fishing Tours</a></li>
+                        <li><a href="scenic-tours.html">Scenic Tours</a></li>
+                        <li><a href="combo-tours.html">Combo Tours</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
                     </ul>
                 </div>
             </div>
@@ -70,15 +70,15 @@
                         <div class="form-3">
                             <div class="field">
                                 <label for="client_name">Name</label>
-                                <input name="client_name" type="text" class="required">
+                                <input name="client_name" type="text" class="required" id="client_name" required>
                             </div>
                             <div class="field">
                                 <label for="client_phone">Phone</label>
-                                <input name="client_phone" type="tel" class="required">
+                                <input name="client_phone" type="tel" class="required" id="client_phone" required>
                             </div>
                             <div class="field">
                                 <label for="client_email">Email</label>
-                                <input name="client_email" type="email" class="required">
+                                <input name="client_email" type="email" class="required" id="client_email" required>
                             </div>
                         </div>
                     </fieldset>
@@ -87,7 +87,11 @@
                         <div class="form-3">
                             <div class="field">
                                 <label>What kind of trip are you interested in?:</label>
-                                <input name="kind_of_trip" type="text" class="required">
+                                <select name="kind_of_trip" id="">
+                                    <option value="Fishing">Fishing</option>
+                                    <option value=""></option>
+                                    <option value=""></option>
+                                </select>
                             </div>
                             <div class="field">
                                 <label>Number in your party:</label>
@@ -95,7 +99,7 @@
                             </div>
                             <div class="field">
                                 <label>Trip Date:</label>
-                                <input class="datepicker Datepicker hasDatepicker" name="trip_date" id="trip_date" type="text">
+                                <input class="datepicker Datepicker hasDatepicker" name="trip_date" id="trip_date" type="date">
                             </div>
                         </div>
                     </fieldset>
@@ -113,7 +117,7 @@
                         <div class="form-3 field-message">
                             <div class="field clearfix">
                                 <label for="secret">For SPAM protection, please type the <em>1st</em> word in "<strong><em>american</em></strong> west tours" (case sensitive!)</label>
-                                <input name="Validate" id="validate" type="text">
+                                <input name="validate" id="validate" type="text">
                             </div>
                         </div>
                     </fieldset>
@@ -175,6 +179,19 @@
 <script src="js/jquery.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
 <script src="js/custom.js"></script>
+<script>
+    jQuery("#contactform").validate();
+    function validateForm()
+    {
+        var text = jQuery('#contactform').find('input[name="validate"]').val();
+        if (text!="american")
+        {
+            jQuery('input[name="validate"]').after('<label class="custom_error">This field is required.</label>');
+            return false;
+        }
+    }
+</script>
 </body>
 </html>

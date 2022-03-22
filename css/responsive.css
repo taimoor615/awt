@@ -111,6 +111,10 @@
         color: var(--primary-color);
         font-size: 45px;
     }
+    .left-content-wrapper h1{
+        font-size: 35px;
+        margin-bottom: 20px;
+    }
     .banner-content p{
         color: var(--primary-color);
     }
@@ -165,8 +169,17 @@
     .inner-structure-main {
         display: block;
     }
+    .inner-main {
+        padding: 50px 0px;
+    }
+    .inner-sidebar{
+        margin: 0 auto;
+    }
     .left-content-wrapper {
         margin-bottom: 50px;
+    }
+    .form-3{
+        margin-bottom: 10px;
     }
 }
 @media all and (max-width: 767px){
@@ -181,6 +194,10 @@
     }
     .banner-sec .swiper-button-next i, .banner-sec .swiper-button-prev i{
         font-size: 50px;
+    }
+    .left-content-wrapper h1{
+        font-size: 25px;
+        margin-bottom: 10px;
     }
     .weather{
         display: none;
@@ -276,17 +293,14 @@
     .footer-inner-row .footer-col ul li{
         margin-bottom: 10px;
     }
-    .inner-main {
-        padding: 70px 0px;
-    }
     .left-content-wrapper > h1 {
         font-size: 28px;
     }
-    .form-wraper.my-contact-form {
-        margin-top: 40px;
-    }
     .sidebar-content h2 {
         font-size: 24px;
+    }
+    .gallery-wrap{
+        grid-template-columns:repeat(3, 1fr);
     }
 }
 @media all and (max-width: 575px){
@@ -298,6 +312,9 @@
     }
     .banner-item{
         padding: 25% 0 60%;
+    }
+    .gallery-wrap{
+        grid-template-columns:repeat(2, 1fr);
     }
 }
 @media all and (max-width: 475px){
@@ -316,6 +333,9 @@
 @media all and (max-width: 375px){
     .banner-item{
         padding: 25% 0 85%;
+    }
+    .gallery-wrap{
+        grid-template-columns:repeat(1, 1fr);
     }
 }
 @media all and (max-width: 360px){}

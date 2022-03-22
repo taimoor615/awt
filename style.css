@@ -24,6 +24,7 @@
     --post-content-color:#272727;
     --black-color:#000000;
     --border-bg-color:#CAC6BB;
+    --error-color:#ff1111;
 }
 a{
     text-decoration: none;
@@ -35,7 +36,7 @@ a{
 a:hover{
     color: var(--secondary-color);
 }
-input,input:focus,textarea{
+input,input:focus,textarea,select{
     outline: none !important;
 }
 p{
@@ -63,6 +64,10 @@ ul li{
     display: grid;
     grid-gap: 45px;
     grid-template-columns: 1fr 300px;
+}
+.left-content-wrapper h1{
+    font-size: 46px;
+    margin-bottom: 30px;
 }
 .inner-sidebar{
     width: 100%;
@@ -629,7 +634,7 @@ footer{
     margin-bottom: 20px;
 }
 /*================================================
-                Contact Form
+                Contact Page
  =================================================*/
 .form-3 {
     display: flex;
@@ -649,7 +654,7 @@ footer{
     font-weight: 500;
     margin-bottom: 14px;
 }
-.form-3 input, textarea, .field input {
+.form-3 input, textarea, .field input,.field select {
     margin: 0;
     padding: 5px 10px;
     width: 100%;
@@ -668,8 +673,10 @@ footer{
     border: 1px #aaa solid;
     box-sizing: border-box;
 }
-.form-wraper.my-contact-form {
-    margin-top: 50px;
+label.error,label.custom_error {
+    position: absolute;
+    margin-bottom: 0;
+    color: var(--error-color);
 }
 .my-contact-form h3{
     font-family: var(--oswald-family);
@@ -704,14 +711,25 @@ footer{
 /*===========================================
                 Gallery Page
  ===========================================*/
+.gallery-main-banner{
+    margin-bottom: 10px;
+}
+.gallery-main-banner img{
+    width: 100%;
+}
 .gallery-wrap {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
 }
 .gallery-wrap a {
     height: 200px;
     overflow: hidden;
+}
+.gallery-wrap a img{
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
 }
 .featherlight-next span, .featherlight-previous span {
     font-size: 30px !important;
